@@ -33,7 +33,7 @@ export default function SearchScreen({ navigation }) {
 
   //fetch Nasdaq 100 stocks data for searching purpose
   const fetchStockData = () => {
-    const API_KEY = `d5c8d1b31e007be468b929cb49029618`; //.bf186a537bcf074adc5473d7be793521--7ec131ab714b8a9e7d682e789a17c5eb-d5c8d1b31e007be468b929cb49029618--daef25f05857f085d0ee147532c044e4
+    const API_KEY = process.env.REACT_APP_API_KEY;
     const url = `https://financialmodelingprep.com/api/v3/nasdaq_constituent?apikey=${API_KEY}`;
     fetch(url)
       .then((res) => res.json())
@@ -48,7 +48,7 @@ export default function SearchScreen({ navigation }) {
 
   //to fetch stock data which include name, symbol, price and change percentage and put into watchlist
   async function getCompanyDatas(stockSymbol) {
-    const API_KEY = `d5c8d1b31e007be468b929cb49029618`;
+    const API_KEY =process.env.REACT_APP_API_KEY;
     const url = `https://financialmodelingprep.com/api/v3/quote/${stockSymbol}?apikey=${API_KEY}`;
     let res = await fetch(url);
     let data = await res.json();
