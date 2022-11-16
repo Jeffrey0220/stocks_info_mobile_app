@@ -5,7 +5,7 @@ function useHistoricalMonthlyPriceApi(search) {
   const [loadingM, setLoadingM] = useState(true);
   const [historicalMonthlyPrice, setHistoricalMonthlyPrice] = useState([]);
   const [errorM, setErrorM] = useState(null);
-  const API_KEY = `Q0UX9HMH0Y7RDAG3`; //alternative:`0CHJ7V4OV6Q5YKON,Q0UX9HMH0Y7RDAG3`
+  const API_KEY =process.env.REACT_APP_API_KEY3; 
   //to fetch monthly historical price of chosen stock
   async function getHistoricalMonthlyPrice(search) {
     const url = `https://www.alphavantage.co/query?function=TIME_SERIES_MONTHLY&symbol=${search}&apikey=${API_KEY}`;
