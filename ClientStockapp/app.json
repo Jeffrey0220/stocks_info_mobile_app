@@ -1,0 +1,30 @@
+{
+  "expo": {
+    "name": "IFN666 Stocks",
+    "slug": "IFN666Stocks",
+    "privacy": "public",
+
+    "platforms": ["ios", "android", "web"],
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "myapp",
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.jeffrey0220.IFN666Stocks"
+    },
+    "description": "Stock Market App for IFN666 at QUT",
+    "android": {
+      "package": "com.jeffrey0220.IFN666Stocks"
+    }
+  }
+}
