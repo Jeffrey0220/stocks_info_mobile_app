@@ -5,7 +5,7 @@ function useHistoricalWeeklyPriceApi(search) {
   const [loadingW, setLoadingW] = useState(true);
   const [historicalWeeklyPrice, setHistoricalWeeklyPrice] = useState([]);
   const [errorW, setErrorW] = useState(null);
-  const API_KEY = `Q0UX9HMH0Y7RDAG3`; //alternative:`0CHJ7V4OV6Q5YKON`Q0UX9HMH0Y7RDAG3
+  const API_KEY = process.env.REACT_APP_API_KEY4; 
   //to fetch weekly historical price of chosen stock
   async function getHistoricalWeeklyPrice(search) {
     const url = `https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY&symbol=${search}&apikey=${API_KEY}`;
