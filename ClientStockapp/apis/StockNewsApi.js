@@ -5,7 +5,7 @@ function useStockNewsPriceApi(search) {
   const [loadingN, setLoadingN] = useState(true);
   const [stockNews, setStockNews] = useState([]);
   const [errorN, setErrorN] = useState(null);
-  const API_KEY = `cak8q4aad3ier73m1ga0`; //cak8q4aad3ier73m1ga0--cadm9i2ad3id9vu65rm0
+  const API_KEY =process.env.REACT_APP_API_KEY5; 
 
   // to fetch current 3 days news of chosen stock
   async function getStockNews(search) {
