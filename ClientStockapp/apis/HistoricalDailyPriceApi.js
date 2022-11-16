@@ -5,7 +5,7 @@ function useHistoricalDailyPriceApi(search) {
   const [loadingD, setLoadingD] = useState(true);
   const [historicalDailyPrice, setHistoricalDailyPrice] = useState([]);
   const [errorD, setErrorD] = useState(null);
-  const API_KEY = `Q0UX9HMH0Y7RDAG3`; //alternative:`0CHJ7V4OV6Q5YKON,Q0UX9HMH0Y7RDAG3`
+  const API_KEY = process.env.REACT_APP_API_KEY2; 
   //to fetch daily historical price of chosen stock
   async function getHistoricalDailyPrice(search) {
     const url = `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${search}&apikey=${API_KEY}`;
